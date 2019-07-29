@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Discussion Board</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link href="resources/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body onload="getAllPosts()">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Discussion Board</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+
+    <form>
+        <div class="container formBlock">
+            <div display="block" text-align="center">
+
+                <p>
+                    <input type="text" id="createUsername" placeholder="Username">
+
+
+                    <input type="text" id="createEmail" placeholder="Email">
+
+                    <button onclick="createPost(); return false">Create</button>
+                </p>
+                <p>
+                    <textarea id="createContent" required placeholder="Content" name="text" rows="10" cols="100"
+                        wrap="soft" style="overflow:hidden; resize:none;"></textarea>
+                </p>
+
+            </div>
+        </div>
+
+    </form>
+
+    <br>
+
+    <div class="container mainBox">
+        <div id="allPosts" border-style="solid" border-width="2px">
+            <h1>All posts</h1>
+        </div>
+    </div>
+
+</body>
+
+<script src="resources/scripts/delete.js"></script>
+<script src="resources/scripts/seeAllPosts.js"></script>
+<script src="resources/scripts/util.js"></script>
+<script src="resources/scripts/create.js"></script>
+</html>
