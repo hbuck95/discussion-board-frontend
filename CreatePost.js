@@ -25,7 +25,7 @@ const createPost = () => {
 
     // Setting out the structure for the item to be posted
     const item = {
-        userName: document.getElementById("createUsername").value,
+        username: document.getElementById("createUsername").value,
         email: document.getElementById("createEmail").value,
         content: document.getElementById("createContent").value
     }
