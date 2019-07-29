@@ -2,6 +2,8 @@
     opacity: 0.95;
     min-height: 300px;
     height: auto !important;
+    border-color: black;
+    border-width: 5px;
     border-radius: 25px;
     padding-bottom: 15px;
 }
