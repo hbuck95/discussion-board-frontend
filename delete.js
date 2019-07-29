@@ -15,11 +15,11 @@ function makeRequest(requestType, url, sendData) {
 }
 
 
-function deleteFunc(id){
-    let jsonData = JSON.stringify(id);
-    return makeRequest("DELETE",  `${ROOT_PATH}/users/delete/`, jsonData).then((req) => {
+function deleteFunc(data, id){
+    let jsonData = JSON.stringify(data);
+    return makeRequest("DELETE",  `/delete`, jsonData).then((req) => {
         console.log("It worked!");
         let toDelete = document.getElementById(id);
         toDelete.parentNode.removeChild(toDelete);
-    }).catch(() => { console.log("Didn't work") });
+    }).catch((err) => { console.log(err) });
 }
