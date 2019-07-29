@@ -19,9 +19,15 @@ function showAllPosts(data) {
         newPostContent.innerText = post[i].content;
         document.getElementById("allPosts").appendChild(newPostContent);
 
+        let newPostEmail = document.createElement('input')
+        document.getElementById("allPosts").appendChild(newPostEmail);
+
         let newPostDelete = document.createElement('button');
         newPostDelete.id = post[i].id;
         newPostDelete.onclick = deletePost(post[i].id);
+        document.getElementById("allPosts").appendChild(newPostDelete);
+
+
 
     }
 }
