@@ -1,4 +1,4 @@
-const httpSender = (method, url, body) => {
+const makeRequest = (method, url, body) => {
 
     return new Promise(
         function (res, rej) {
@@ -19,7 +19,8 @@ const httpSender = (method, url, body) => {
 
 
 // Default URL ready to be adjusted
-let url = "http://localhost:5000/DiscussionBoard/CreatePost"
+let url = "/add"
+
 const createPost = () => {
 
     // Setting out the structure for the item to be posted
@@ -28,8 +29,8 @@ const createPost = () => {
         email: document.getElementById("createEmail").value,
         content: document.getElementById("createContent").value
     }
-
-    httpSender("POST", url, JSON.stringify(item)).then(val => {
+    // Convert item to string and post to url specified
+    makeRequest("POST", url, JSON.stringify(item)).then(val => {
         location.reload();
     }).catch(function (error) {
         console.log(error.message)
