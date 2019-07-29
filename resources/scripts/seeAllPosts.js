@@ -12,7 +12,7 @@ function showAllPosts(data) {
     for (let i = 0; i < post.length; i++) {
         let newPostHead = document.createElement('div');
         newPostHead.innerText = 'Username: ' + post[i].username;
-        newPostHead.id = post[i].id + "head";
+        newPostHead.id = post[i]._id + "head";
         newPostHead.style = "font-weight: bold";
         document.getElementById("allPosts").appendChild(newPostHead);
 
@@ -23,8 +23,8 @@ function showAllPosts(data) {
         document.getElementById("allPosts").appendChild(newPostContent);
 
         let newPostDelete = document.createElement('button');
-        newPostDelete.id = post[i].id;
-        newPostDelete.onclick = deletePost(post[i].id);
+        newPostDelete.id = post[i]._id;
+        newPostDelete.onclick = deletePost(post[i]._id);
         newPostDelete.innertext = "X";
         document.getElementById("allPosts").appendChild(newPostDelete);
 
