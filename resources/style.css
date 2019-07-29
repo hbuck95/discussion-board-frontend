@@ -1,0 +1,12 @@
+.mainBox{
+    opacity: 0.95;
+    min-height: 300px;
+    height: auto !important;
+    border-radius: 25px;
+    padding-bottom: 15px;
+}
+
+.formBlock{
+    display: block;
+    text-align: center;
+}
