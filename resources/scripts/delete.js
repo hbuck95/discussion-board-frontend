@@ -8,6 +8,5 @@ function deletePost(id){
         console.log("It worked!");
         let toDelete = document.getElementById(id+"head");
         toDelete.parentNode.removeChild(toDelete);
-        reload();
     }).catch((err) => { console.log(err) });
 }
