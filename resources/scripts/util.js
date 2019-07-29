@@ -17,3 +17,7 @@ async function makeRequest(method, url, body) {
         req.send(body);
     });
 }
+
+function reload(){
+    window.location.reload();
+}

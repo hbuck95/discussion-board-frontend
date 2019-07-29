@@ -4,9 +4,10 @@ function deletePost(id){
         email: createEmail.value
     }
     
-    return makeRequest("DELETE", "/delete", JSON.stringify(jsonData)).then((req) => {
+    makeRequest("DELETE", "/delete", JSON.stringify(jsonData)).then((req) => {
         console.log("It worked!");
-        let toDelete = document.getElementById(id);
+        let toDelete = document.getElementById(id+"head");
         toDelete.parentNode.removeChild(toDelete);
+        reload();
     }).catch((err) => { console.log(err) });
 }

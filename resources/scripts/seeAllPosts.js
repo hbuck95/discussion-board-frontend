@@ -24,7 +24,8 @@ function showAllPosts(data) {
 
         let newPostDelete = document.createElement('button');
         newPostDelete.id = post[i]._id;
-        newPostDelete.onclick = deletePost(post[i]._id);
+        //newPostDelete.onclick = deletePost(post[i]._id);
+        newPostDelete.setAttribute("onclick", `deletePost('${post[i]._id}')`);
         document.getElementById("allPosts").appendChild(newPostDelete);
 
 
